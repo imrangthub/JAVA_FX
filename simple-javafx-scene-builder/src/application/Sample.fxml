@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="application.SampleController">
+   <center>
+      <VBox prefHeight="503.0" prefWidth="505.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="507.0" text="Click me!" onAction="#onClickBtn1" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
