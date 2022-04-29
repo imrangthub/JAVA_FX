@@ -2,6 +2,7 @@ package application;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -10,8 +11,28 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class BookService {
+	
+	PreparedStatement pepStmt;
+	
+	public boolean deletBook(String bookId) {
+		   try
+	        {
+			   pepStmt = getConnection().prepareStatement("delete from book where id = ? ");
+			   pepStmt.setInt(1, Integer.parseInt(bookId));
+			   pepStmt.executeUpdate();
+	            
+	        }catch (Exception e) {
+	        	return false;
+	        }
+		   
+			return true;
+	}
 
-	public void executeQuery(String query) {
+	public boolean insertBook(Book bookObj) {
+		
+		String query = "insert into book values(" + bookObj.getId() + ",'" + bookObj.getName() + "','"
+				+ bookObj.getType()+ "')";
+		
 		Connection conn = getConnection();
 		Statement st;
 		try {
@@ -19,15 +40,16 @@ public class BookService {
 			System.out.println(query);
 			st.executeUpdate(query);
 		} catch (Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
+			return false;
 		} finally {
 			try {
 				conn.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				//e.printStackTrace();
 			}
 		}
+		return true;
 	}
 
 	public void showBooks() {

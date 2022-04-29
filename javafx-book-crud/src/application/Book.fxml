@@ -9,15 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
-	minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0"
-	prefWidth="668.0" xmlns="http://javafx.com/javafx/18"
-	xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="application.BookController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BookController">
 	<children>
-		<VBox layoutX="14.0" layoutY="14.0" prefHeight="175.0"
-			prefWidth="94.0">
+		<VBox layoutX="14.0" layoutY="14.0" prefHeight="175.0" prefWidth="94.0">
 			<children>
 				<Label prefHeight="21.0" prefWidth="58.0" text="ID">
 					<padding>
@@ -36,8 +30,7 @@
 				</Label>
 			</children>
 		</VBox>
-		<VBox layoutX="108.0" layoutY="14.0" prefHeight="189.0"
-			prefWidth="178.0">
+		<VBox layoutX="108.0" layoutY="14.0" prefHeight="189.0" prefWidth="178.0">
 			<children>
 				<TextField fx:id="tfBookId">
 					<padding>
@@ -65,24 +58,15 @@
 				</TextField>
 			</children>
 		</VBox>
-		<TableView fx:id="tvBook" layoutX="334.0" layoutY="14.0"
-			prefHeight="385.0" prefWidth="317.0">
+		<TableView fx:id="tvBook" layoutX="346.0" layoutY="10.0" prefHeight="385.0" prefWidth="376.0">
 			<columns>
 				<TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
-				<TableColumn fx:id="colName"
-					prefWidth="122.66668701171875" text="Name" />
-				<TableColumn fx:id="colType"
-					prefWidth="116.6666259765625" text="Type" />
+				<TableColumn fx:id="colName" prefWidth="148.66671752929688" text="Name" />
+				<TableColumn fx:id="colType" prefWidth="154.6666259765625" text="Type" />
 			</columns>
 		</TableView>
-		<Button fx:id="btnAddId" layoutX="21.0" layoutY="334.0"
-			mnemonicParsing="false" onAction="#onClickAddBtn" prefHeight="37.0"
-			prefWidth="94.0" text="Add" />
-		<Button fx:id="btnUpdateId" layoutX="123.0" layoutY="334.0"
-			mnemonicParsing="false" onAction="#onClickUpdateBtn"
-			prefHeight="37.0" prefWidth="94.0" text="Update" />
-		<Button fx:id="btnDeleteId" layoutX="228.0" layoutY="334.0"
-			mnemonicParsing="false" onAction="#onClickDeleteBtn"
-			prefHeight="37.0" prefWidth="94.0" text="Delete" />
+		<Button fx:id="btnAddId" layoutX="21.0" layoutY="334.0" mnemonicParsing="false" onAction="#onClickAddBtn" prefHeight="37.0" prefWidth="94.0" text="Add" />
+		<Button fx:id="btnUpdateId" layoutX="123.0" layoutY="334.0" mnemonicParsing="false" onAction="#onClickUpdateBtn" prefHeight="37.0" prefWidth="94.0" text="Update" />
+		<Button fx:id="btnDeleteId" layoutX="228.0" layoutY="334.0" mnemonicParsing="false" onAction="#onClickDeleteBtn" prefHeight="37.0" prefWidth="94.0" text="Delete" />
 	</children>
 </AnchorPane>
